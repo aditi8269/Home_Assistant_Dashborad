@@ -71,8 +71,8 @@ Each room includes:
 ```
 /app
 ├── backend/
-│   ├── server.py              # FastAPI application with all routes
-│   ├── requirements.txt       # Python dependencies
+│   ├── server.js              # application with all routes
+│   ├── requirements.txt       # backend dependencies
 │   └── .env                   # Environment variables
 │
 ├── frontend/
@@ -102,7 +102,7 @@ Each room includes:
 │   ├── package.json
 │   └── tailwind.config.js
 │
-└── design_guidelines.json     # Design system specifications
+
 ```
 
 ## API Endpoints
@@ -134,13 +134,12 @@ Each room includes:
 
 ### Prerequisites
 - Node.js 16+
-- Python 3.9+
 - MongoDB running locally
 
 ### Backend Setup
 ```bash
 cd /app/backend
-pip install -r requirements.txt
+npm install -r requirements.txt
 # Database will be automatically seeded on first startup
 ```
 
@@ -152,39 +151,8 @@ yarn install
 
 ### Running the Application
 The application is already configured to run via supervisor:
-- Backend: http://0.0.0.0:8001
+- Backend: http://0.0.0.0:8000
 - Frontend: http://localhost:3000
-- API Base: https://smart-home-mern.preview.emergentagent.com/api
-
-To restart services:
-```bash
-sudo supervisorctl restart backend
-sudo supervisorctl restart frontend
-```
-
-## Design System
-
-### Color Palette
-- **Living Room**: #F59E0B (Amber)
-- **Bedroom**: #EC4899 (Pink)
-- **Kitchen**: #10B981 (Green)
-- **Bathroom**: #06B6D4 (Cyan)
-- **Guest Room**: #8B5CF6 (Purple)
-- **Status Active**: #22C55E (Green)
-- **Status Inactive**: #71717A (Gray)
-- **Status Alert**: #EF4444 (Red)
-
-### Typography
-- **Headings**: Manrope (600, 700, 800)
-- **Body**: Inter (400, 500)
-- **Mono**: JetBrains Mono (400, 500)
-
-### Key Features
-- Glassmorphism effects with backdrop blur
-- Rounded cards (1.5rem border radius)
-- Smooth animations and transitions
-- Touch-optimized controls
-- Accessible color contrast
 
 ## Demo Data
 
@@ -203,39 +171,6 @@ Redux Toolkit is used for centralized state management with the following slices
 - **Energy**: Energy consumption data
 - **Media**: Media player state
 - **Theme**: Dark/light mode preference
-
-## Testing
-
-Comprehensive test coverage includes:
-- Backend API endpoint testing
-- Frontend component testing
-- Redux state management testing
-- Responsive design testing
-- User interaction testing
-
-Run tests:
-```bash
-# Backend tests
-python /app/backend_test.py
-
-# Frontend tests (via testing agent)
-# See /app/test_reports/iteration_1.json
-```
-
-## Performance
-
-- Fast initial load with code splitting
-- Efficient Redux state updates
-- Smooth animations via Framer Motion
-- Optimized MongoDB queries with projections
-- Hot reload in development
-
-## Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Future Enhancements
 
