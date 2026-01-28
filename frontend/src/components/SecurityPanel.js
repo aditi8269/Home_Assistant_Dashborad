@@ -73,6 +73,7 @@ const SecurityPanel = () => {
           <Switch
             checked={security.armed}
             onCheckedChange={(checked) => handleToggle('armed', checked)}
+            deviceType="armed"  // <- light-theme yellow pill
             data-testid="security-arm-switch"
           />
         </div>
@@ -91,6 +92,7 @@ const SecurityPanel = () => {
           <Switch
             checked={security.doorLocked}
             onCheckedChange={(checked) => handleToggle('doorLocked', checked)}
+            deviceType="door"  // <- light-theme cyan pill
             data-testid="security-door-switch"
           />
         </div>

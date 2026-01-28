@@ -74,10 +74,11 @@ const DeviceControl = ({ device, roomColor }) => {
           </div>
         </div>
         <Switch
-          checked={isActive}
-          onCheckedChange={handleToggle}
-          data-testid={`device-switch-${device.id}`}
-        />
+        checked={isActive}
+        onCheckedChange={handleToggle}
+        deviceType={device.type}
+        data-testid={`device-switch-${device.id}`}
+      />
       </div>
 
       {/* Value Slider */}
