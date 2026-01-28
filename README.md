@@ -52,10 +52,11 @@ Each room includes:
 ## Tech Stack
 
 ### Backend
-- **FastAPI**: Modern, fast Python web framework
 - **MongoDB**: NoSQL database with Motor async driver
-- **Pydantic**: Data validation and serialization
+- **Zod**: Data validation and serialization
 - **CORS**: Cross-origin resource sharing enabled
+- **NODE.JS**: for runtime Environment
+- **EXPRESS.js**: For handling APIs and Middlewares
 
 ### Frontend
 - **React 19**: Latest React with hooks
@@ -71,7 +72,7 @@ Each room includes:
 ```
 /app
 ├── backend/
-│   ├── server.js              # application with all routes
+│   ├── server.js              # application with all routes , Schemas , Dumy Data
 │   ├── requirements.txt       # backend dependencies
 │   └── .env                   # Environment variables
 │
